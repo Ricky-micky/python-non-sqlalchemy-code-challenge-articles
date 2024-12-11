@@ -25,6 +25,9 @@ class Article:
         else:
             return None # Return None if validation fails.
 
+    def __repr__(self):
+        return f"Article(title='{self.title}')"        
+
            
     @property
     def author(self):
@@ -81,6 +84,9 @@ class Author:
             if self.magazines()
             else None
         )
+
+    def __repr__(self):
+        return f"Author(name='{self.name}')"    
 
 
 class Magazine:
@@ -143,6 +149,9 @@ class Magazine:
             return unique_contributors
         else:
             None
+
+    def __repr__(self):
+        return f"Magazine(category='{self.category}')"        
 
 
 #Create Authors
